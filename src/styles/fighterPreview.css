@@ -5,9 +5,20 @@
 }
 
 .fighter-preview___right {
-  align-items: flex-end;
+  align-items: center;
 }
 
 .fighter-preview___left {
-  align-items: flex-start;
+  align-items: center;
 }
+
+.fighter-preview__user h1 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.fighter-preview__user div {
+  font-size: 19px;
+  color: #fff;
+}
+

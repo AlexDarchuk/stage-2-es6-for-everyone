@@ -5,7 +5,7 @@ class FighterService {
     try {
       const endpoint = 'fighters.json';
       const apiResult = await callApi(endpoint, 'GET');
-
+      console.log(apiResult);
       return apiResult;
     } catch (error) {
       throw error;
@@ -15,11 +15,17 @@ class FighterService {
   async getFighterDetails(id) {
     // todo: implement this method
     // endpoint - `details/fighter/${id}.json`;
-    const endpoint = `details/fighter/${id}.json`;
-    const apiResult = await callApi(endpoint, 'GET');
-
-    return apiResult;
+    try {
+      const endpoint = `details/fighter/${id}.json`
+      const apiResult = await callApi(endpoint, 'GET');
+      console.log(apiResult);
+      return apiResult;
+    } catch (error) {
+      throw error;
+    }
   }
+
+
 }
 
 export const fighterService = new FighterService();
